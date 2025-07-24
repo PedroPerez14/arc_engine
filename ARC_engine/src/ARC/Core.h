@@ -9,3 +9,5 @@
 #else
 	#error ARC_Engine is only supported for Windows!
 #endif
+
+#define BIT(x) (1 << x)

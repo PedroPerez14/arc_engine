@@ -1,4 +1,4 @@
-//Header that should only be included form client applications, like Sandbox, never ARC itself.
+//Header that should only be included from client applications, like Sandbox, never ARC itself.
 
 #pragma once
 
