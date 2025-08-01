@@ -21,6 +21,9 @@ project "ARC_engine"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+	pchheader "arcpch.h"
+	pchsource "ARC_engine/src/arcpch.cpp"
+
 	files
 	{
 		"%{prj.name}/src/**.h",

@@ -1,6 +1,6 @@
 #pragma once
 
-#include <memory>
+#include "arcpch.h" // memory
 
 #include "Core.h"
 #include "spdlog/spdlog.h"

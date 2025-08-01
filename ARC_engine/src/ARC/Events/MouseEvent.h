@@ -1,8 +1,8 @@
 #pragma once
 
-#include "Event.h"
+#include "arcpch.h"		// sstream
 
-#include <sstream>
+#include "Event.h"
 
 namespace ARC
 {

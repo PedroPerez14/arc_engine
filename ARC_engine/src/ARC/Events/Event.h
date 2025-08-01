@@ -1,9 +1,8 @@
 #pragma once
 
-#include "ARC/Core.h"
+#include "arcpch.h"	// string, functional
 
-#include <string>
-#include <functional>
+#include "ARC/Core.h"
 
 namespace ARC
 {
