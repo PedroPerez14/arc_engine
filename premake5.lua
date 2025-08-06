@@ -13,6 +13,16 @@ workspace "ARC_engine"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+-- Include the relevant directories, we'll do that through a lua struct 
+-- (i'm just following a tutorial but i'm taing notes of everything because i want to fucking learn something)
+
+IncludeDir = {}
+IncludeDir["GLFW"] = "ARC_engine/vendor/GLFW/include"
+
+-- This includes the premake in that directory, as a C++ style include
+-- (nothing to do with directories)
+include "ARC_engine/vendor/GLFW"
+
 project "ARC_engine"
 	location "ARC_engine"
 	kind "SharedLib"
@@ -33,7 +43,14 @@ project "ARC_engine"
 	includedirs
 	{
 		"%{prj.name}/vendor/spdlog/include",
-		"%{prj.name}/src"
+		"%{prj.name}/src",
+		"%{IncludeDir.GLFW}"
+	}
+
+	links
+	{
+		"GLFW",
+		"opengl32.lib"
 	}
 
 	filter "system:windows"

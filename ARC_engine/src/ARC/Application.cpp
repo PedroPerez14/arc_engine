@@ -5,11 +5,13 @@
 #include "ARC/Events/ApplicationEvent.h"
 #include "ARC/Log.h"
 
+#include <GLFW/glfw3.h>
+
 namespace ARC
 {
 	Application::Application()
 	{
-
+		m_Window = std::unique_ptr<Window>(Window::Create());
 	}
 
 	Application::~Application()
@@ -19,12 +21,13 @@ namespace ARC
 
 	void Application::Run()
 	{
-		WindowResizeEvent e(1200, 720);
-		ARC_TRACE(e.ToString());
-
-		while (true)
+		while(m_Running)
 		{
-			// Do Stuff
+			glClearColor(0.2, 1, 0.3, 1);	// A cool green shade (every green shade is cool, green itself is cool)
+			glClear(GL_COLOR_BUFFER_BIT);
+			m_Window->OnUpdate();
+
+			// Next up: Window events !!1!
 		}
 	}
 }

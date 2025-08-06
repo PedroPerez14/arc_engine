@@ -12,6 +12,8 @@
 #include <unordered_map>
 #include <unordered_set>
 
+#include "ARC/Log.h"
+
 #ifdef ARC_PLATFORM_WINDOWS
 	#include <Windows.h>
 #endif
