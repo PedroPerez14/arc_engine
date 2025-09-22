@@ -18,7 +18,7 @@ namespace ARC
 		int m_KeyCode;
 	};
 
-	class ARC_API KeyPressedEvent : public keyEvent
+	class ARC_API KeyPressedEvent : public KeyEvent
 	{
 	public:
 		KeyPressedEvent(int keycode, int repeatCount) : KeyEvent(keycode), m_RepeatCount(repeatCount) {}

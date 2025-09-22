@@ -2,6 +2,7 @@
 
 #include "Core.h"
 #include "Events/Event.h"
+#include "ARC/Events/ApplicationEvent.h"
 #include "Window.h"
 
 namespace ARC
@@ -17,7 +18,11 @@ namespace ARC
 
 		void Run();
 
+		void OnEvent(Event& e);
+
 	private:
+		bool OnWindowClose(WindowCloseEvent& e);
+
 		std::unique_ptr<Window> m_Window;
 		bool m_Running = true;
 	};

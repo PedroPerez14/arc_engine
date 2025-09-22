@@ -34,6 +34,9 @@ namespace ARC
 		MouseScrolledEvent(float xOffset, float yOffset) 
 			: m_XOffset(xOffset), m_YOffset(yOffset) {}
 
+		inline float GetXOffset() const { return m_XOffset; }
+		inline float GetYOffset() const { return m_YOffset; }
+
 		std::string ToString() const override
 		{
 			std::stringstream ss;
@@ -57,7 +60,7 @@ namespace ARC
 		MouseButtonEvent(int button)
 			: m_Button(button) {}
 		
-		int button;
+		int m_Button;
 	};
 
 	class ARC_API MouseButtonPressedEvent : public MouseButtonEvent
@@ -89,6 +92,6 @@ namespace ARC
 			return ss.str();
 		}
 
-		EVENT_CLASS_TYPE(MouseButtonReleasedEvent)
+		EVENT_CLASS_TYPE(MouseButtonReleased)
 	};
 }

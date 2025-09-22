@@ -83,12 +83,13 @@ namespace ARC
 		Event& m_Event;
 	};
 
+	// Sometimes uncommenting this makes everything work (spdlog is weird I guess)
 	inline std::ostream& operator<<(std::ostream& os, const Event& e)
 	{
 		return os << e.ToString();
 	}
 
-	/*inline std::string format_as(const Event& e) {
+	inline std::string format_as(const Event& e) {
 		return e.ToString();
-	}*/
+	}
 }
