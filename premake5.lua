@@ -76,14 +76,17 @@ project "ARC_engine"
 
 	filter "configurations:Debug"
 		defines "ARC_DEBUG"
+		buildoptions "/MDd"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "ARC_RELEASE"
+		buildoptions "/MD"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "ARC_DIST"
+		buildoptions "/MD"
 		optimize "On"
 	
 project "Sandbox"
@@ -128,12 +131,15 @@ project "Sandbox"
 
 	filter "configurations:Debug"
 		defines "ARC_DEBUG"
+		buildoptions "/MDd"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "ARC_RELEASE"
+		buildoptions "/MD"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "ARC_DIST"
+		buildoptions "/MD"
 		optimize "On"

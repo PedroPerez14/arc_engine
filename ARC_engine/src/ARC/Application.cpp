@@ -21,6 +21,16 @@ namespace ARC
 		
 	}
 
+	void Application::PushLayer(Layer* layer)
+	{
+		m_LayerStack.PushLayer(layer);
+	}
+
+	void Application::PushOverlay(Layer* layer)
+	{
+		m_LayerStack.PushOverlay(layer);
+	}
+
 	void Application::OnEvent(Event& e)
 	{
 		// Events will be dispatched from here
@@ -28,8 +38,17 @@ namespace ARC
 		dispatcher.Dispatch<WindowCloseEvent>(BIND_EVENT_FN(OnWindowClose));
 
 		
-		ARC_CORE_INFO("{0}", e);			// Only for debugging purposes
+		ARC_CORE_TRACE("{0}", e);			// Only for debugging purposes
+
+		// Propagate events to our layers, in reverse order!
+		for (auto it = m_LayerStack.end(); it != m_LayerStack.begin(); )
+		{
+			(*--it)->OnEvent(e);
+			if (e.m_Handled)
+				break;
+		}
 	}
+
 
 	bool Application::OnWindowClose(WindowCloseEvent& e)
 	{
@@ -43,9 +62,14 @@ namespace ARC
 		{
 			glClearColor(0.2, 1, 0.3, 1);	// A cool green shade (every green shade is cool, green itself is cool)
 			glClear(GL_COLOR_BUFFER_BIT);
-			m_Window->OnUpdate();
 
-			// Next up: Window events !!1!
+			// Update method for our layers
+			for (Layer* layer : m_LayerStack)
+			{
+				layer->OnUpdate();
+			}
+			// Update method for our window (s?)
+			m_Window->OnUpdate();
 		}
 	}
 }
