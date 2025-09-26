@@ -5,6 +5,8 @@
 #include "ARC/Events/MouseEvent.h"
 #include "ARC/Events/ApplicationEvent.h"
 
+#include <glad/glad.h>
+
 namespace ARC
 {
 	// static since it's only needed once across all possible windows
@@ -51,8 +53,10 @@ namespace ARC
 
 		m_Window = glfwCreateWindow((int)props.Width, (int)props.Height, m_Data.title.c_str(), nullptr, nullptr);
 		glfwMakeContextCurrent(m_Window);
-		glfwSetWindowUserPointer(m_Window, &m_Data);
+ 		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
+		ARC_CORE_ASSERT(status, "Failed to initialize GLAD!");
 
+		glfwSetWindowUserPointer(m_Window, &m_Data);
 		SetVSync(true);
 
 		// Set GLFW Callbacks

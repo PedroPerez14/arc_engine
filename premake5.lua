@@ -18,10 +18,12 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 IncludeDir = {}
 IncludeDir["GLFW"] = "ARC_engine/vendor/GLFW/include"
+IncludeDir["glad"] = "ARC_engine/vendor/glad/include"
 
 -- This includes the premake in that directory, as a C++ style include
 -- (nothing to do with directories)
 include "ARC_engine/vendor/GLFW"
+include "ARC_engine/vendor/glad"
 
 project "ARC_engine"
 	location "ARC_engine"
@@ -44,12 +46,14 @@ project "ARC_engine"
 	{
 		"%{prj.name}/vendor/spdlog/include",
 		"%{prj.name}/src",
-		"%{IncludeDir.GLFW}"
+		"%{IncludeDir.GLFW}",
+		"%{IncludeDir.glad}"
 	}
 
 	links
 	{
 		"GLFW",
+		"glad",
 		"opengl32.lib"
 	}
 
@@ -61,7 +65,8 @@ project "ARC_engine"
 		defines
 		{
 			"ARC_PLATFORM_WINDOWS",
-			"ARC_BUILD_DLL"
+			"ARC_BUILD_DLL",
+			"GLFW_INCLUDE_NONE"
 		}
 
 		buildoptions
