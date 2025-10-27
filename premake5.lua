@@ -19,11 +19,13 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 IncludeDir = {}
 IncludeDir["GLFW"] = "ARC_engine/vendor/GLFW/include"
 IncludeDir["glad"] = "ARC_engine/vendor/glad/include"
+IncludeDir["ImGui"] = "ARC_engine/vendor/imgui"
 
 -- This includes the premake in that directory, as a C++ style include
 -- (nothing to do with directories)
 include "ARC_engine/vendor/GLFW"
 include "ARC_engine/vendor/glad"
+include "ARC_engine/vendor/ImGui"
 
 project "ARC_engine"
 	location "ARC_engine"
@@ -47,13 +49,15 @@ project "ARC_engine"
 		"%{prj.name}/vendor/spdlog/include",
 		"%{prj.name}/src",
 		"%{IncludeDir.GLFW}",
-		"%{IncludeDir.glad}"
+		"%{IncludeDir.glad}",
+		"%{IncludeDir.ImGui}"
 	}
 
 	links
 	{
 		"GLFW",
 		"glad",
+		"ImGui",
 		"opengl32.lib"
 	}
 

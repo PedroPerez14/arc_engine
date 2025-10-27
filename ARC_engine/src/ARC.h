@@ -6,6 +6,8 @@
 #include "ARC/Layer.h"
 #include "ARC/Log.h"
 
+#include "ARC/ImGui/ImGuiLayer.h"
+
 // ----- ENTRY POINT GOES HERE -----
 #include "ARC/EntryPoint.h"
 // ---------------------------------

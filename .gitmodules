@@ -4,3 +4,6 @@
 [submodule "ARC_engine/vendor/GLFW"]
 	path = ARC_engine/vendor/GLFW
 	url = https://github.com/TheCherno/glfw
+[submodule "ARC_engine/vendor/imgui"]
+	path = ARC_engine/vendor/imgui
+	url = https://github.com/TheCherno/imgui
