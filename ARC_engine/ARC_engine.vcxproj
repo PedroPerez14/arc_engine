@@ -163,12 +163,14 @@
     <ClInclude Include="src\ARC\Events\Event.h" />
     <ClInclude Include="src\ARC\Events\KeyEvent.h" />
     <ClInclude Include="src\ARC\Events\MouseEvent.h" />
+    <ClInclude Include="src\ARC\Input.h" />
     <ClInclude Include="src\ARC\ImGui\ImGuiLayer.h" />
     <ClInclude Include="src\ARC\Layer.h" />
     <ClInclude Include="src\ARC\LayerStack.h" />
     <ClInclude Include="src\ARC\Log.h" />
     <ClInclude Include="src\ARC\Window.h" />
     <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
+    <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\arcpch.h" />
   </ItemGroup>
@@ -179,6 +181,7 @@
     <ClCompile Include="src\ARC\LayerStack.cpp" />
     <ClCompile Include="src\ARC\Log.cpp" />
     <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp" />
+    <ClCompile Include="src\Platform\Windows\WindowsInput.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\arcpch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>

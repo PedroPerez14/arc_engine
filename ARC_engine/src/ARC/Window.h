@@ -39,6 +39,8 @@ namespace ARC
 		virtual void SetVSync(bool enabled) = 0;
 		virtual bool IsVSync() const = 0;
 
+		virtual void* GetNativeWindow() const = 0;	// void* since we might change glfw in the future for something else
+
 		static Window* Create(const WindowProps& props = WindowProps());
 	};
 }
