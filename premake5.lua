@@ -18,6 +18,7 @@ IncludeDir = {}
 IncludeDir["GLFW"] = "ARC_engine/vendor/GLFW/include"
 IncludeDir["glad"] = "ARC_engine/vendor/glad/include"
 IncludeDir["ImGui"] = "ARC_engine/vendor/imgui"
+IncludeDir["glm"] = "ARC_engine/vendor/glm"
 
 -- This includes the premake in that directory, as a C++ style include
 -- (nothing to do with directories)
@@ -49,7 +50,8 @@ project "ARC_engine"
 		"%{prj.name}/src",
 		"%{IncludeDir.GLFW}",
 		"%{IncludeDir.glad}",
-		"%{IncludeDir.ImGui}"
+		"%{IncludeDir.ImGui}",
+		"%{IncludeDir.glm}"
 	}
 
 	links
@@ -108,13 +110,16 @@ project "Sandbox"
 	files
 	{
 		"%{prj.name}/src/**.h",
-		"%{prj.name}/src/**.cpp"
+		"%{prj.name}/src/**.cpp",
+		"%{prj.name}/vendor/glm/glm/**.hpp",
+		"%{prj.name}/vendor/glm/glm/**.inl",
 	}
 
 	includedirs
 	{
 		"ARC_engine/vendor/spdlog/include",
-		"ARC_engine/src"
+		"ARC_engine/src",
+		"%{IncludeDir.glm}"
 	}
 
 	links

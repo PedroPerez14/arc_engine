@@ -46,6 +46,12 @@
     <ClInclude Include="src\ARC\ImGui\ImGuiLayer.h">
       <Filter>ARC\ImGui</Filter>
     </ClInclude>
+    <ClInclude Include="src\ARC\Input.h">
+      <Filter>ARC</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ARC\KeyCodes.h">
+      <Filter>ARC</Filter>
+    </ClInclude>
     <ClInclude Include="src\ARC\Layer.h">
       <Filter>ARC</Filter>
     </ClInclude>
@@ -55,20 +61,22 @@
     <ClInclude Include="src\ARC\Log.h">
       <Filter>ARC</Filter>
     </ClInclude>
+    <ClInclude Include="src\ARC\MouseButtonCodes.h">
+      <Filter>ARC</Filter>
+    </ClInclude>
     <ClInclude Include="src\ARC\Window.h">
       <Filter>ARC</Filter>
     </ClInclude>
     <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h">
       <Filter>Platform\OpenGL</Filter>
     </ClInclude>
+    <ClInclude Include="src\Platform\Windows\WindowsInput.h">
+      <Filter>Platform\Windows</Filter>
+    </ClInclude>
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
       <Filter>Platform\Windows</Filter>
     </ClInclude>
     <ClInclude Include="src\arcpch.h" />
-    <ClInclude Include="src\ARC\Input.h" />
-    <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
-    <ClInclude Include="src\ARC\KeyCodes.h" />
-    <ClInclude Include="src\ARC\MouseButtonCodes.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\ARC\Application.cpp">
@@ -89,10 +97,12 @@
     <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp">
       <Filter>Platform\OpenGL</Filter>
     </ClCompile>
+    <ClCompile Include="src\Platform\Windows\WindowsInput.cpp">
+      <Filter>Platform\Windows</Filter>
+    </ClCompile>
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
       <Filter>Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\arcpch.cpp" />
-    <ClCompile Include="src\Platform\Windows\WindowsInput.cpp" />
   </ItemGroup>
 </Project>

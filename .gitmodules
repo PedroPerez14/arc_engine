@@ -7,3 +7,6 @@
 [submodule "ARC_engine/vendor/imgui"]
 	path = ARC_engine/vendor/imgui
 	url = https://github.com/TheCherno/imgui
+[submodule "ARC_engine/vendor/glm"]
+	path = ARC_engine/vendor/glm
+	url = https://github.com/g-truc/glm
