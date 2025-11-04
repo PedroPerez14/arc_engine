@@ -67,6 +67,8 @@
     <ClInclude Include="src\arcpch.h" />
     <ClInclude Include="src\ARC\Input.h" />
     <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
+    <ClInclude Include="src\ARC\KeyCodes.h" />
+    <ClInclude Include="src\ARC\MouseButtonCodes.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\ARC\Application.cpp">

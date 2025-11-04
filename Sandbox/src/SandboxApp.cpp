@@ -11,6 +11,9 @@ public:
 	void OnUpdate() override
 	{
 		ARC_INFO("ExampleLayer::Update");
+
+		if (ARC::Input::IsKeyPressed(ARC_KEY_TAB))
+			ARC_TRACE("TAB IS PRESSED!");
 	}
 
 	void OnEvent(ARC::Event& event) override

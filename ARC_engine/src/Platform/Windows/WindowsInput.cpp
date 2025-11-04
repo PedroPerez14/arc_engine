@@ -6,7 +6,7 @@
 
 namespace ARC
 {
-	Input* Input::s_Instance = new WindowsInput();			// TODO: I don't understand why this belongs here but ok, I´ll figure it out
+	Input* Input::s_Instance = new WindowsInput();			// Move initialization from here in the future?
 
 	bool WindowsInput::IsKeyPressedImpl(int keycode)
 	{

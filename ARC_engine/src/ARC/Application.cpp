@@ -82,8 +82,6 @@ namespace ARC
 				layer->OnUpdate();
 			}
 
-			auto [x, y] = Input::GetMousePosition();
-			ARC_CORE_TRACE("Mouse Positon: {0}, {1}", x, y);
 
 			// Update method for our window (s?)
 			m_Window->OnUpdate();

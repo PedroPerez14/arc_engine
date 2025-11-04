@@ -163,8 +163,10 @@
     <ClInclude Include="src\ARC\Events\Event.h" />
     <ClInclude Include="src\ARC\Events\KeyEvent.h" />
     <ClInclude Include="src\ARC\Events\MouseEvent.h" />
+    <ClInclude Include="src\ARC\MouseButtonCodes.h" />
     <ClInclude Include="src\ARC\Input.h" />
     <ClInclude Include="src\ARC\ImGui\ImGuiLayer.h" />
+    <ClInclude Include="src\ARC\KeyCodes.h" />
     <ClInclude Include="src\ARC\Layer.h" />
     <ClInclude Include="src\ARC\LayerStack.h" />
     <ClInclude Include="src\ARC\Log.h" />
