@@ -178,6 +178,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\ARC\Application.cpp" />
+    <ClCompile Include="src\ARC\ImGui\ImGuiBuild.cpp" />
     <ClCompile Include="src\ARC\ImGui\ImGuiLayer.cpp" />
     <ClCompile Include="src\ARC\Layer.cpp" />
     <ClCompile Include="src\ARC\LayerStack.cpp" />

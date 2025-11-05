@@ -104,5 +104,6 @@
       <Filter>Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\arcpch.cpp" />
+    <ClCompile Include="src\ARC\ImGui\ImGuiBuild.cpp" />
   </ItemGroup>
 </Project>
