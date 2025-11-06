@@ -18,6 +18,7 @@ namespace ARC
 		virtual void OnAttach() {}				// when pushed into the layer stack
 		virtual void OnDetach() {}				// when it's pulled out of the layer stack
 		virtual void OnUpdate() {}				// self-explanatory
+		virtual void OnImGuiRender() {}
 		virtual void OnEvent(Event& event) {}	// for other, more general events
 
 		inline const std::string& getName() const { return m_DebugName; }

@@ -22,7 +22,7 @@ namespace ARC
 		std::vector<Layer*>::iterator end() { return m_Layers.end();  }
 	private:
 		std::vector<Layer*> m_Layers;
-		std::vector<Layer*>::iterator m_LayerInsert;
+		unsigned int m_LayerInsertIndex = 0;
 
 		// We use a vector since we'll need to iterate in both directions:
 		//		- forward each frame

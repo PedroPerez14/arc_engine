@@ -7,6 +7,8 @@
 #include "ARC/Events/Event.h"
 #include "ARC/Events/ApplicationEvent.h"
 
+#include "ARC/ImGui/ImGuiLayer.h"
+
 namespace ARC
 {
 	class ARC_API Application
@@ -33,6 +35,7 @@ namespace ARC
 		bool OnWindowClose(WindowCloseEvent& e);
 
 		std::unique_ptr<Window> m_Window;
+		ImGuiLayer* m_ImGuiLayer;
 		bool m_Running = true;
 		LayerStack m_LayerStack;
 
