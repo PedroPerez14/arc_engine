@@ -118,8 +118,9 @@ project "Sandbox"
 	includedirs
 	{
 		"ARC_engine/vendor/spdlog/include",
+		"ARC_engine/vendor",
 		"ARC_engine/src",
-		"%{IncludeDir.glm}"
+		"%{IncludeDir.glm}",
 	}
 
 	links

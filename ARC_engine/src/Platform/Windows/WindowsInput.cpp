@@ -40,7 +40,7 @@ namespace ARC
 
 	float WindowsInput::GetMouseYImpl()
 	{
-		auto [x, y] = GetMousePositionImpl();		// This was sponsored by C++ 17
+		auto [x, y] = GetMousePositionImpl();		// This, too, was sponsored by C++ 17
 		return y;
 	}
 }
